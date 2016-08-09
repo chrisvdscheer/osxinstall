@@ -1,0 +1,58 @@
+echo via dit script zullen de benodigde tools gedownload worden om een goede development machine op te zetten.
+
+echo Aller eerst installeren we brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo Vervolgens gaan we alle apps installeren
+brew install brew-cask
+brew cask install google-chrome 
+brew tap homebrew/science
+brew install wget
+brew install postgresql
+brew install go
+brew install node
+brew install ant
+brew install ffmpeg
+brew install eigen
+brew install opencv
+npm install -g gitjk
+sudo npm install -g cordova
+npm install phonegap -g
+
+# Core Functionality
+brew cask install --appdir="/Applications" alfred
+brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" little-snitch
+brew cask install --appdir="~/Applications" transmit
+brew cask install --appdir="~/Applications" vlc
+brew cask install --appdir="~/Applications" iterm2
+brew cask install --appdir="~/Applications" java
+
+#install Dev tools
+brew cask install --appdir="/Applications" github
+brew cask install --appdir="/Applications" heroku-toolbelt
+brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" webstorm
+brew cask install --appdir="/Applications" pycharm-pro
+brew cask install --appdir="/Applications" light-table
+brew cask install --appdir="/Applications" macvim
+brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" vagrant
+brew cask install --appdir="/Applications" sourcetree
+brew cask install --appdir="/Applications" charles
+brew cask install --appdir="/Applications" easyfind
+
+#additional apps
+echo Install Some additional Apps
+brew cask install --appdir="/Applications" firefox
+
+brew cask install --appdir="/Applications" skype
+brew cask install --appdir="/Applications" jdownloader
+brew cask install --appdir="/Applications" lastfm
+brew cask install --appdir="/Applications" all2mp3
+brew cask install --appdir="/Applications" spotify
+brew cask install --appdir="/Applications" spotify-notifications
+
+# cleanup
+brew cleanup --force
+rm -f -r /Library/Caches/Homebrew/*
